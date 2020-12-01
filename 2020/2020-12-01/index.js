@@ -4,12 +4,10 @@ const fs = require('fs');
 const input = fs.readFileSync("./2020/2020-12-01/input.txt", "utf-8").split('\n').map(x=>+x)
 const endnumber = 2020
 
-// get the answer
-const part1 = get2numbers(input,endnumber)
-const part2 = get3numbers(input,endnumber)
-console.log(`Answer part 1: ${part1}\nAnswer part 2: ${part2}`)
+// log the answer
+console.log(`Answer part 1: ${get2numbers(input,endnumber)}\nAnswer part 2: ${get3numbers(input,endnumber)}`)
 
-// get the 2 numbers that sum endnumber
+// get the 2 numbers that sum to the number required
 function get2numbers(input, endnumber){
     for(const value1 in input){
         for(const value2 in input){
@@ -20,7 +18,7 @@ function get2numbers(input, endnumber){
     }
 }
 
-// get the 3 numbers that sum to 2020
+// get the 3 numbers that sum to the number required
 function get3numbers(input, endnumber){
     for(const value1 in input){
         for(const value2 in input){
